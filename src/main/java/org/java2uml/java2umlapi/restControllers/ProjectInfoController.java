@@ -98,7 +98,7 @@ public class ProjectInfoController {
                             schema = @Schema(implementation = ErrorResponse.class))
             )
     })
-    @DeleteMapping("/{projectId}")
+    @DeleteMapping("/delete/{projectId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public Object delete(@PathVariable Long projectId) {
         ProjectInfo projectInfo = projectInfoRepository.findById(projectId).orElseThrow(
